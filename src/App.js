@@ -1,17 +1,23 @@
 import React from "react";
-import { InputText } from 'primereact/inputtext';
-import {Password} from 'primereact/password';
+import {
+    BrowserRouter as Router,
+    Redirect,
+    Route,
+    Switch,
+} from "react-router-dom";
+import Login from "./pages/Login";
+import "./App.css"
+import {LOGIN_PAGE} from "./constants/routes";
 
-function Login() {
-    return (
-        <div>
-            <span className="p-float-label">
-                <InputText id="in" value={value} />
-                <label htmlFor="in">Username</label>
-            </span>
-            <Password value={value} />
-        </div>
+export default function () {
+    return(
+        <Router>
+            <Switch>
+                <Route exact path="/">
+                    <Redirect to={LOGIN_PAGE} />
+                </Route>
+                <Route path={LOGIN_PAGE} exact component={Login}/>
+            </Switch>
+        </Router>
     );
 }
-
-export default Login
