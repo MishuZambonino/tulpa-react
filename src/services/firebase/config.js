@@ -14,7 +14,6 @@ const config = {
     appId: process.env.REACT_APP_APP_ID
 };
 
-export const facebookProvider = new firebase.auth.FacebookAuthProvider();
 export const sessionPersistence = firebase.auth.Auth.Persistence.SESSION;
 
 firebase.initializeApp(config);

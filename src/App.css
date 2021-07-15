@@ -1,17 +1,34 @@
 span{
     margin: 30px;
 }
+body{
+    font-family:"Calibri Light";
+    margin: 0;
+    padding: 0;
+}
 .w-100{
     width: 100%;
+}
+.login-button{
+    background-color: purple;
+}
+.login-title{
+    text-align: center;
+    font-family:"Calibri Light";
 }
 .p-button{
     display:block;
 }
-.sign-in-button{
+.sign-in-button-div{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1em 0;
+}
+.forgot-password-div{
+    display: flex;
+    justify-content: flex-end;
+    margin: -15px 30px 15px 0px;
 }
 .login-container{
     display: flex;
@@ -19,9 +36,14 @@ span{
     align-items: center;
     height:100vh;
     flex-direction: column;
-    background: white;
+    background: url('./images/login-background.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .login-div{
-    border: 1px solid black;
     border-radius: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 5px gray;
 }

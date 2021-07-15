@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1615dbb7-25b9-4d5e-b078-de95b29c2e9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Firebase/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Firebase/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/administration/ocupations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Firebase/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/firebase/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Firebase/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/firebase/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +51,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sales-flowers-ui" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -55,8 +59,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mishe\Documents\GitHub\tulpa-react\src\pages" />
+      <recent name="C:\Users\mishe\Documents\GitHub\tulpa-react\public" />
       <recent name="C:\Users\mishe\Documents\GitHub\tulpa-react\src" />
+      <recent name="C:\Users\mishe\Documents\GitHub\tulpa-react\src\services" />
+      <recent name="C:\Users\mishe\Documents\GitHub\tulpa-react\src\pages" />
       <recent name="C:\Users\mishe\Documents\GitHub\tulpa-react\src\login" />
     </key>
   </component>
@@ -105,7 +111,10 @@
       <workItem from="1625714969914" duration="753000" />
       <workItem from="1625756495577" duration="22000" />
       <workItem from="1625864621165" duration="89000" />
-      <workItem from="1625864961214" duration="1107000" />
+      <workItem from="1625864961214" duration="3303000" />
+      <workItem from="1625931397875" duration="601000" />
+      <workItem from="1626188664694" duration="597000" />
+      <workItem from="1626275826716" duration="12303000" />
     </task>
     <servers />
   </component>
@@ -113,26 +122,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1625756510811">
+    <state x="542" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1626322405860">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1625756510811" />
-    <state width="1515" height="203" key="GridCell.Tab.0.bottom" timestamp="1625714705593">
+    <state x="542" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1626322405860" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1626317160632">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="203" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1625714705593" />
-    <state width="1515" height="203" key="GridCell.Tab.0.center" timestamp="1625714705593">
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1626317160632" />
+    <state width="1515" height="203" key="GridCell.Tab.0.bottom" timestamp="1626327835799">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="203" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1625714705593" />
-    <state width="1515" height="203" key="GridCell.Tab.0.left" timestamp="1625714705593">
+    <state width="1515" height="203" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1626327835799" />
+    <state width="1515" height="203" key="GridCell.Tab.0.center" timestamp="1626327835799">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="203" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1625714705593" />
-    <state width="1515" height="203" key="GridCell.Tab.0.right" timestamp="1625714705593">
+    <state width="1515" height="203" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1626327835799" />
+    <state width="1515" height="203" key="GridCell.Tab.0.left" timestamp="1626327835799">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="203" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1625714705593" />
+    <state width="1515" height="203" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1626327835799" />
+    <state width="1515" height="203" key="GridCell.Tab.0.right" timestamp="1626327835799">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="203" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1626327835799" />
     <state x="277" y="74" key="SettingsEditor" timestamp="1625611109986">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -141,5 +154,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1625867123535" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1626327049111">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1626327049111" />
   </component>
 </project>
