@@ -1,20 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+:root{
+    --primary-color-tulpa: #009399;
+}
+
 span{
     margin: 30px;
 }
 body{
-    font-family:"Calibri Light";
+    font-family: 'Roboto';
     margin: 0;
     padding: 0;
+}
+a{
+    color: #6c757d;
+    font-size: small;
 }
 .w-100{
     width: 100%;
 }
 .login-button{
-    background-color: purple;
+    background-color: var(--primary-color-tulpa);
+    border-color: white;
+}
+.login-button:hover{
+    background-color: #0c6b6e !important;
+    border-color: white !important  ;
 }
 .login-title{
     text-align: center;
-    font-family:"Calibri Light";
+    font-family: 'Roboto';
 }
 .p-button{
     display:block;
