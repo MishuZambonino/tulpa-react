@@ -54,7 +54,7 @@ const SideBarMenu = ({ history }) => {
       <div className="card">
         <Sidebar visible={visibleLeft} onHide={() => setVisibleLeft(false)}>
           <h3>Menú</h3>
-          <PanelMenu model={NUMERARIA_ITEMS} style={{ width: "22rem" }} />
+          <PanelMenu model={NUMERARIA_ITEMS} className="menu-div" />
         </Sidebar>
         <Button
           icon="pi pi-bars"

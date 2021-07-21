@@ -31,7 +31,7 @@ const Login = ({ history }) => {
     <div className="login-container">
       <div className="login-div">
         <h1 className="login-title">Iniciar sesión</h1>
-        <span className="p-float-label">
+        <span className="p-float-label input-span">
           <InputText
             id="in"
             className="w-100 p-inputtext-sm p-d-block p-mb-2"
@@ -39,7 +39,7 @@ const Login = ({ history }) => {
           />
           <label htmlFor="in">Email</label>
         </span>
-        <span className="p-float-label">
+        <span className="p-float-label input-span">
           <Password
             toggleMask
             feedback={false}
