@@ -1,21 +1,65 @@
-import React, { Component, useContext } from "react";
-import { SlideMenu } from "primereact/slidemenu";
-import { NUMERARIA_ITEMS, RESIDENT_ITEMS } from "../../constants/menuItems";
+import React, { Component, useContext, useState } from "react";
+import { PanelMenu } from "primereact/panelmenu";
 import { useLocation, withRouter } from "react-router-dom";
+import { Sidebar } from "primereact/sidebar";
+import { Button } from "primereact/button";
+import { OCUPATION_PAGE, LOGIN_PAGE } from "../../constants/routes";
 import "./style.scss";
 
-const SideBarMenu = ({ selected, history }) => {
+const SideBarMenu = ({ history }) => {
+  const [visibleLeft, setVisibleLeft] = useState(false);
+  const [visibleFullScreen, setVisibleFullScreen] = useState(false);
   const onSelect = (selected) => {
-    selected && history.push({ pathname: "/" + selected });
-    setSelected(selected);
+    history.push(selected);
   };
+  const NUMERARIA_ITEMS = [
+    {
+      label: "Administrar Catálogos",
+      icon: "pi pi-book",
+      items: [
+        {
+          label: "Ocupaciones",
+          icon: "pi pi-check",
+          command: () => {
+            onSelect(OCUPATION_PAGE);
+          },
+        },
+        {
+          label: "Pisos",
+          icon: "pi pi-check",
+        },
+      ],
+    },
+    {
+      label: "Administrar Residencia",
+      icon: "pi pi-home",
+      items: [
+        {
+          label: "Entrevistas",
+          icon: "pi pi-check",
+        },
+        {
+          label: "Residentes",
+          icon: "pi pi-check",
+        },
+      ],
+    },
+    {
+      label: "Cerrar Sesión",
+      icon: "pi pi-fw pi-power-off",
+    },
+  ];
   return (
     <div>
       <div className="card">
-        <SlideMenu
-          model={NUMERARIA_ITEMS}
-          viewportHeight={700}
-          menuWidth={175}
+        <Sidebar visible={visibleLeft} onHide={() => setVisibleLeft(false)}>
+          <h3>Menú</h3>
+          <PanelMenu model={NUMERARIA_ITEMS} style={{ width: "22rem" }} />
+        </Sidebar>
+        <Button
+          icon="pi pi-bars"
+          onClick={() => setVisibleLeft(true)}
+          className="p-mr-2"
         />
       </div>
     </div>

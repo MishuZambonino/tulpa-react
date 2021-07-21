@@ -4,10 +4,10 @@ import { AuthContext } from "../../App";
 import { useContext } from "react";
 import SideBarMenu from "../../components/SideBarMenu";
 
-function Ocupation() {
+const Ocupation = () => {
   const { user } = useContext(AuthContext);
 
   return <SideBarMenu />;
-}
+};
 
 export default Ocupation;

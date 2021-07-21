@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { PrimeIcons } from "primereact/api";
+import { LOGIN_PAGE, OCUPATION_PAGE } from "./routes";
 
 export const NUMERARIA_ITEMS = [
   {
@@ -9,6 +10,9 @@ export const NUMERARIA_ITEMS = [
       {
         label: "Ocupaciones",
         icon: "pi pi-check",
+        command: () => {
+          onSelect(LOGIN_PAGE);
+        },
       },
       {
         label: "Pisos",
