@@ -4,8 +4,11 @@
   "private": true,
   "main": "index.js",
   "dependencies": {
+    "@types/express": "^4.17.13",
+    "express": "^4.17.1",
     "firebase": "^8.7.0",
     "node-sass": "^6.0.1",
+    "pg": "^8.6.0",
     "primeflex": "^2.0.0",
     "primeicons": "^4.1.0",
     "primereact": "^6.5.0-rc.2",
@@ -14,7 +17,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-toastify": "^7.0.4",
-    "react-transition-group": "^4.4.2"
+    "react-transition-group": "^4.4.2",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.34"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^16.4.0",
     "prettier": "2.3.2"
   }
 }

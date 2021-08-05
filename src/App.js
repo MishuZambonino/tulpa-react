@@ -11,6 +11,7 @@ import "./App.css";
 import { LOGIN_PAGE, OCUPATION_PAGE } from "./constants/routes";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "reflect-metadata";
 
 export const AuthContext = React.createContext(null);
 export default function () {
