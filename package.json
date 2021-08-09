@@ -18,8 +18,7 @@
     "react-scripts": "4.0.3",
     "react-toastify": "^7.0.4",
     "react-transition-group": "^4.4.2",
-    "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.2.34"
+    "reflect-metadata": "^0.1.13"
   },
   "scripts": {
     "start": "react-scripts start",
