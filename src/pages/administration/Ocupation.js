@@ -1,26 +1,44 @@
+import React, { useContext, useState, useEffect } from "react";
 import { InputText } from "primereact/inputtext";
-import { Password } from "primereact/password";
 import { AuthContext } from "../../App";
-import { useContext, useState } from "react";
 import SideBarMenu from "../../components/SideBarMenu";
-import { Button } from "primereact/button";
-import "../../App.css";
-import { addUser } from "../../services/firebase/collection/user";
+import {
+  addOcupation,
+  getAllOcupations,
+} from "../../services/firebase/collection/ocupation";
 import { OCUPATION_PAGE } from "../../constants/routes";
+import Table from "../../components/Table";
+import { Column } from "primereact/column";
 
 const Ocupation = () => {
   const { user } = useContext(AuthContext);
-  const [residenceUser, setResidenceUser] = useState([
-    {
-      email: "",
-      full_name: "",
-      id: "",
-      role: "",
-    },
-  ]);
-  const createUser = async (event) => {
+  const [ocupation, setOcupation] = useState({
+    id: "",
+    name: "",
+    active: true,
+  });
+  const [ocupations, setOcupations] = useState([]);
+  const [globalFilter, setGlobalFilter] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const ocupationsFetched = await getAllOcupations();
+      return { ocupationsFetched };
+    }
+
+    fetchData()
+      .then((data) => {
+        const { ocupationsFetched } = data;
+        setOcupations(ocupationsFetched.docs.map((d) => d.data()));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  const createOcupation = async (event) => {
     try {
-      const response = await addUser(residenceUser);
+      const response = await addOcupation(ocupation);
       console.log("Se supone que se guardo");
     } catch (error) {
       console.log(error);
@@ -29,70 +47,29 @@ const Ocupation = () => {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-div">
-        <h1 className="login-title">Iniciar sesión</h1>
-        <span className="p-float-label input-span">
-          <InputText
-            id="in"
-            className="w-100 p-inputtext-sm p-d-block p-mb-2"
-            onChange={(event) =>
-              setResidenceUser({ ...residenceUser, id: event.target.value })
-            }
-          />
-          <label htmlFor="in">Id</label>
-        </span>
-        <span className="p-float-label input-span">
-          <InputText
-            id="in"
-            className="w-100 p-inputtext-sm p-d-block p-mb-2"
-            onChange={(event) =>
-              setResidenceUser({
-                ...residenceUser,
-                full_name: event.target.value,
-              })
-            }
-          />
-          <label htmlFor="in">Full Name</label>
-        </span>
-        <span className="p-float-label input-span">
-          <InputText
-            id="in"
-            className="w-100 p-inputtext-sm p-d-block p-mb-2"
-            onChange={(event) =>
-              setResidenceUser({
-                ...residenceUser,
-                email: event.target.value,
-              })
-            }
-          />
-          <label htmlFor="in">Email</label>
-        </span>
-        <span className="p-float-label input-span">
-          <InputText
-            id="in"
-            className="w-100 p-inputtext-sm p-d-block p-mb-2"
-            onChange={(event) =>
-              setResidenceUser({
-                ...residenceUser,
-                role: event.target.value,
-              })
-            }
-          />
-          <label htmlFor="in">Role</label>
-        </span>
-        <div className="sign-in-button-div">
-          <Button
-            type="button"
-            label="Guardar"
-            className="login-button"
-            onClick={createUser}
-          />
-        </div>
-      </div>
-    </div>
+    <>
+      <SideBarMenu />
+      <Table
+        data={ocupations}
+        rows={10}
+        dataKey="id"
+        emptyMessage="No hay el texto"
+        tableName="Ocupaciones"
+        setGlobalFilter={setGlobalFilter}
+      >
+        <Column field="name" header="Ocupación" sortable />
+        <Column field="id" header="Estado" sortable />
+
+        <Column
+          header="Acciones"
+          body={(rowData) => (
+            <button onClick={() => console.log(rowData)}>Aplastame we</button>
+          )}
+          filterPlaceholder="Search by name"
+        />
+      </Table>
+    </>
   );
-  //return <SideBarMenu />;
 };
 
 export default Ocupation;

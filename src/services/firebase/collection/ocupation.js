@@ -4,3 +4,6 @@ const OcupationRef = db.collection("ocupation");
 export const addOcupation = (params) => {
   return OcupationRef.add(OcupationRef.add(params));
 };
+export const getAllOcupations = () => {
+  return OcupationRef.get();
+};
