@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1615dbb7-25b9-4d5e-b078-de95b29c2e9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Table/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/administration/Ocupation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/administration/Ocupation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/firebase/collection/ocupation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/firebase/collection/ocupation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/firebase/collection/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/firebase/collection/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +150,7 @@
       <workItem from="1628175739819" duration="6578000" />
       <workItem from="1628259914437" duration="2040000" />
       <workItem from="1628523532130" duration="6896000" />
-      <workItem from="1628548488475" duration="8274000" />
+      <workItem from="1628548488475" duration="11598000" />
     </task>
     <servers />
   </component>
