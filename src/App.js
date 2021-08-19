@@ -6,7 +6,7 @@ import {
   Switch,
 } from "react-router-dom";
 import Login from "./pages/Login";
-import Ocupation from "./pages/administration/Ocupation";
+import Ocupation from "./pages/administration/Ocupation/Ocupation";
 import "./App.css";
 import { LOGIN_PAGE, OCUPATION_PAGE } from "./constants/routes";
 import { ToastContainer, toast } from "react-toastify";
