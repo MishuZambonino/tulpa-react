@@ -35,14 +35,14 @@ const Table = ({
 
   const leftToolbarTemplate = () => {
     return (
-      <React.Fragment>
+      <>
         <Button
           label="Nuevo"
           icon="pi pi-plus"
           className="p-button-success p-mr-2"
           onClick={openNew}
         />
-      </React.Fragment>
+      </>
     );
   };
 

@@ -6,6 +6,7 @@ import { classNames } from "primereact/utils";
 import {
   addOcupation,
   getAllOcupations,
+  listenOcupations,
 } from "../../../services/firebase/collection/ocupation";
 import { OCUPATION_PAGE } from "../../../constants/routes";
 import Table from "../../../components/Table";
@@ -14,6 +15,7 @@ import { Button } from "primereact/button";
 import "./components/ocupation.scss";
 import { values } from "pg/lib/native/query";
 import OcupationModal from "./components/OcupationModal";
+import { Checkbox } from "primereact/checkbox";
 
 const Ocupation = () => {
   const { user } = useContext(AuthContext);
@@ -26,8 +28,6 @@ const Ocupation = () => {
   const [globalFilter, setGlobalFilter] = useState(null);
   const [showDialog, setShowDialog] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [name, setName] = useState("");
-  const [isActive, setIsActive] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -43,7 +43,16 @@ const Ocupation = () => {
       .catch((error) => {
         console.log(error);
       });
+    listenOcupationChange();
   }, []);
+
+  const listenOcupationChange = () => {
+    listenOcupations((ocupationsFetched) => {
+      setOcupations(ocupationsFetched.docs.map((d) => d.data()));
+      console.log(ocupationsFetched);
+    });
+  };
+
   const openNew = () => {
     setOcupation({
       id: "",
@@ -61,25 +70,19 @@ const Ocupation = () => {
     setOcupation({ ...ocupation });
     setShowDialog(true);
   };
-  const createOcupation = async (event) => {
-    try {
-      const response = await addOcupation(ocupation);
-      console.log("Se supone que se guardo");
-    } catch (error) {
-      console.log(error);
-    }
-    event.preventDefault();
-  };
   const actionBodyTemplate = (rowData) => {
     return (
-      <React.Fragment>
+      <>
         <Button
           icon="pi pi-pencil"
           className="p-button-rounded p-button-success p-mr-2"
           onClick={() => editOcupation(rowData)}
         />
-      </React.Fragment>
+      </>
     );
+  };
+  const activeBodyTemplate = () => {
+    return <Checkbox disabled />;
   };
   return (
     <>
@@ -88,13 +91,13 @@ const Ocupation = () => {
         data={ocupations}
         rows={10}
         dataKey="id"
-        emptyMessage="No hay el texto"
+        emptyMessage="No existen registros"
         tableName="Ocupaciones"
         setGlobalFilter={setGlobalFilter}
         openNew={openNew}
       >
         <Column field="name" header="Ocupación" sortable />
-        <Column field="id" header="Estado" sortable />
+        <Column field="active" header="Activo" body={activeBodyTemplate} />
         <Column body={actionBodyTemplate}></Column>
       </Table>
       <OcupationModal

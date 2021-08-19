@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1615dbb7-25b9-4d5e-b078-de95b29c2e9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/administration/Ocupation/components/OcupationModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/administration/Ocupation/components/ocupation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/generateId.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/administration/Ocupation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/administration/Ocupation/Ocupation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/administration/Ocupation/Ocupation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/administration/Ocupation/Ocupation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/administration/Ocupation/components/OcupationModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/administration/Ocupation/components/OcupationModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/firebase/collection/ocupation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/firebase/collection/ocupation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +160,7 @@
       <workItem from="1628904667278" duration="594000" />
       <workItem from="1629133440536" duration="6372000" />
       <workItem from="1629244320516" duration="2517000" />
-      <workItem from="1629338849254" duration="7361000" />
+      <workItem from="1629338849254" duration="13284000" />
     </task>
     <servers />
   </component>
