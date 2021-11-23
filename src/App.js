@@ -7,11 +7,18 @@ import {
 } from "react-router-dom";
 import Login from "./pages/Login";
 import Ocupation from "./pages/administration/Ocupation/Ocupation";
+import Floor from "./pages/administration/Floor/Floor";
 import "./App.css";
-import { LOGIN_PAGE, OCUPATION_PAGE } from "./constants/routes";
+import {
+  LOGIN_PAGE,
+  OCUPATION_PAGE,
+  FLOOR_PAGE,
+  UNIVERSITY_PAGE,
+} from "./constants/routes";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "reflect-metadata";
+import University from "./pages/administration/University/University";
 
 export const AuthContext = React.createContext(null);
 export default function () {
@@ -27,6 +34,8 @@ export default function () {
             </Route>
             <Route path={LOGIN_PAGE} exact component={Login} />
             <Route path={OCUPATION_PAGE} exact component={Ocupation} />
+            <Route path={FLOOR_PAGE} exact component={Floor} />
+            <Route path={UNIVERSITY_PAGE} exact component={University} />
           </Switch>
         </Router>
       </AuthContext.Provider>

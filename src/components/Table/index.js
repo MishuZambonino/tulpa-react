@@ -25,7 +25,7 @@ const Table = ({
           <i className="pi pi-search" />
           <InputText
             type="search"
-            onInput={(e) => setGlobalFilter(e.target.value)}
+            onInput={(event) => setGlobalFilter(event.target.value)}
             placeholder="Buscar"
           />
         </span>

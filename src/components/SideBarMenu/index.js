@@ -3,7 +3,12 @@ import { PanelMenu } from "primereact/panelmenu";
 import { useLocation, withRouter } from "react-router-dom";
 import { Sidebar } from "primereact/sidebar";
 import { Button } from "primereact/button";
-import { OCUPATION_PAGE, LOGIN_PAGE } from "../../constants/routes";
+import {
+  OCUPATION_PAGE,
+  LOGIN_PAGE,
+  FLOOR_PAGE,
+  UNIVERSITY_PAGE,
+} from "../../constants/routes";
 import "./style.scss";
 
 const SideBarMenu = ({ history }) => {
@@ -27,6 +32,16 @@ const SideBarMenu = ({ history }) => {
         {
           label: "Pisos",
           icon: "pi pi-check",
+          command: () => {
+            onSelect(FLOOR_PAGE);
+          },
+        },
+        {
+          label: "Universidades",
+          icon: "pi pi-check",
+          command: () => {
+            onSelect(UNIVERSITY_PAGE);
+          },
         },
       ],
     },

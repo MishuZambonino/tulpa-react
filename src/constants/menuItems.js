@@ -18,6 +18,10 @@ export const NUMERARIA_ITEMS = [
         label: "Pisos",
         icon: "pi pi-check",
       },
+      {
+        label: "Universidades",
+        icon: "pi pi-check",
+      },
     ],
   },
   {
