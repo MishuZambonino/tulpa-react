@@ -22,6 +22,10 @@ export const NUMERARIA_ITEMS = [
         label: "Universidades",
         icon: "pi pi-check",
       },
+      {
+        label: "Geografía",
+        icon: "pi pi-check",
+      },
     ],
   },
   {

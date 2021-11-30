@@ -5,5 +5,6 @@ export const LOGIN_PAGE = "/login";
 export const OCUPATION_PAGE = "/ocupation";
 export const FLOOR_PAGE = "/floor";
 export const UNIVERSITY_PAGE = "/university";
+export const COUNTRY_PAGE = "/country";
 
 //residentes pages

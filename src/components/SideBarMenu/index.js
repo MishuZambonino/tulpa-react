@@ -8,6 +8,7 @@ import {
   LOGIN_PAGE,
   FLOOR_PAGE,
   UNIVERSITY_PAGE,
+  COUNTRY_PAGE,
 } from "../../constants/routes";
 import "./style.scss";
 
@@ -41,6 +42,13 @@ const SideBarMenu = ({ history }) => {
           icon: "pi pi-check",
           command: () => {
             onSelect(UNIVERSITY_PAGE);
+          },
+        },
+        {
+          label: "Geografía",
+          icon: "pi pi-check",
+          command: () => {
+            onSelect(COUNTRY_PAGE);
           },
         },
       ],
