@@ -6,12 +6,11 @@ import { Toast } from "primereact/toast";
 import { addFloor } from "../../../../services/firebase/collection/floor";
 import { Button } from "primereact/button";
 import { generateId } from "../../../../utils/generateId";
-import { InputNumber } from "primereact/inputnumber";
 
 const FloorModal = ({ hideDialog, floorEdit, showDialog }) => {
   const [floor, setFloor] = useState({
     id: "",
-    number: "",
+    number: 0,
     active: true,
   });
   const toast = useRef(null);
@@ -36,7 +35,7 @@ const FloorModal = ({ hideDialog, floorEdit, showDialog }) => {
       });
       setFloor({
         id: "",
-        number: "",
+        number: 0,
         active: true,
       });
     } catch (e) {
@@ -45,9 +44,9 @@ const FloorModal = ({ hideDialog, floorEdit, showDialog }) => {
   };
 
   const handleEditFloor = (event) => {
-    const { number, value } = event.target;
+    const { name, value } = event.target;
     const floorCopy = { ...floor };
-    floorCopy[number] = value;
+    floorCopy[name] = value;
     setFloor(floorCopy);
     console.log(floor);
   };
@@ -89,7 +88,7 @@ const FloorModal = ({ hideDialog, floorEdit, showDialog }) => {
         onHide={hideDialog}
       >
         <div className="p-field">
-          <label htmlFor="number">Piso:</label>
+          <label htmlFor="name">Piso:</label>
           <InputText
             id="number"
             name="number"
@@ -97,7 +96,13 @@ const FloorModal = ({ hideDialog, floorEdit, showDialog }) => {
             onChange={handleEditFloor}
             required
             autoFocus
+            // className={classNames({
+            //   "p-invalid": submitted && !floor.name,
+            // })}
           />
+          {/*{submitted && !product.name && (*/}
+          {/*  <small className="p-error">Name is required.</small>*/}
+          {/*)}*/}
         </div>
         <div className="p-field">
           <div className="p-formgrid p-grid">

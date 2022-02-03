@@ -78,6 +78,7 @@ const Country = () => {
           className="p-button-rounded p-button-success p-mr-2"
           onClick={() => editCountry(rowData)}
         />
+        <Button label="Provincias" />
       </>
     );
   };

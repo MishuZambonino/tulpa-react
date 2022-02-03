@@ -21,7 +21,7 @@ const Floor = () => {
   const { user } = useContext(AuthContext);
   const [floor, setFloor] = useState({
     id: "",
-    number: "",
+    number: 0,
     active: true,
   });
   const [floors, setFloors] = useState([]);
@@ -56,7 +56,7 @@ const Floor = () => {
   const openNew = () => {
     setFloor({
       id: "",
-      number: "",
+      number: 0,
       active: true,
     });
     setSubmitted(false);
@@ -81,7 +81,7 @@ const Floor = () => {
       </>
     );
   };
-  const activeBodyTemplate = () => {
+  const activeBodyTemplate = (status) => {
     return <Checkbox disabled />;
   };
   return (
