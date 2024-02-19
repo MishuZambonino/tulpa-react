@@ -4,11 +4,11 @@ import { useLocation, withRouter } from "react-router-dom";
 import { Sidebar } from "primereact/sidebar";
 import { Button } from "primereact/button";
 import {
-  OCUPATION_PAGE,
+  TEACHER_PAGE,
   LOGIN_PAGE,
-  FLOOR_PAGE,
-  UNIVERSITY_PAGE,
-  COUNTRY_PAGE,
+  SCHEDULE_PAGE,
+  BALANCE_PAGE,
+  STUDENT_PAGE,
 } from "../../constants/routes";
 import "./style.scss";
 
@@ -18,52 +18,52 @@ const SideBarMenu = ({ history }) => {
   const onSelect = (selected) => {
     history.push(selected);
   };
-  const NUMERARIA_ITEMS = [
+  const ADMINISTRATOR_ITEMS = [
     {
-      label: "Administrar Catálogos",
-      icon: "pi pi-book",
+      label: "Administrar Centro",
+      icon: "pi pi-home",
       items: [
         {
-          label: "Ocupaciones",
-          icon: "pi pi-check",
+          label: "Profesores",
+          icon: "pi pi-user",
           command: () => {
-            onSelect(OCUPATION_PAGE);
+            onSelect(TEACHER_PAGE);
           },
         },
         {
-          label: "Pisos",
-          icon: "pi pi-check",
+          label: "Horarios",
+          icon: "pi pi-calendar",
           command: () => {
-            onSelect(FLOOR_PAGE);
+            onSelect(SCHEDULE_PAGE);
           },
         },
         {
-          label: "Universidades",
-          icon: "pi pi-check",
+          label: "Balances",
+          icon: "pi pi-dollar",
           command: () => {
-            onSelect(UNIVERSITY_PAGE);
+            onSelect(BALANCE_PAGE);
           },
         },
         {
-          label: "Geografía",
-          icon: "pi pi-check",
+          label: "Estudiantes",
+          icon: "pi pi-user",
           command: () => {
-            onSelect(COUNTRY_PAGE);
+            onSelect(STUDENT_PAGE);
           },
         },
       ],
     },
     {
-      label: "Administrar Residencia",
-      icon: "pi pi-home",
+      label: "Administrar Registros",
+      icon: "pi pi-tags",
       items: [
         {
-          label: "Entrevistas",
+          label: "Registrar asistencias",
           icon: "pi pi-check",
         },
         {
-          label: "Residentes",
-          icon: "pi pi-check",
+          label: "Registrar pagos",
+          icon: "pi pi-dollar",
         },
       ],
     },
@@ -77,7 +77,7 @@ const SideBarMenu = ({ history }) => {
       <div className="card">
         <Sidebar visible={visibleLeft} onHide={() => setVisibleLeft(false)}>
           <h3>Menú</h3>
-          <PanelMenu model={NUMERARIA_ITEMS} className="menu-div" />
+          <PanelMenu model={ADMINISTRATOR_ITEMS} className="menu-div" />
         </Sidebar>
         <Button
           icon="pi pi-bars"

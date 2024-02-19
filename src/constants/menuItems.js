@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { PrimeIcons } from "primereact/api";
-import { LOGIN_PAGE, OCUPATION_PAGE } from "./routes";
+import { LOGIN_PAGE, TEACHER_PAGE } from "./routes";
 
-export const NUMERARIA_ITEMS = [
+export const ADMINISTRATOR_ITEMS = [
   {
     label: "Administrar Catálogos",
     icon: "pi pi-book",
@@ -29,15 +29,15 @@ export const NUMERARIA_ITEMS = [
     ],
   },
   {
-    label: "Administrar Residencia",
+    label: "Administrar registros",
     icon: "pi pi-home",
     items: [
       {
-        label: "Entrevistas",
+        label: "Registrar asistencias",
         icon: "pi pi-check",
       },
       {
-        label: "Residentes",
+        label: "Registrar pago",
         icon: "pi pi-check",
       },
     ],
@@ -49,8 +49,18 @@ export const NUMERARIA_ITEMS = [
 ];
 export const RESIDENT_ITEMS = [
   {
-    label: "Registrar Actividad",
-    icon: "pi pi-fw pi-plus",
+    label: "Administrar registros",
+    icon: "pi pi-home",
+    items: [
+      {
+        label: "Registrar asistencias",
+        icon: "pi pi-check",
+      },
+      {
+        label: "Registrar pago",
+        icon: "pi pi-check",
+      },
+    ],
   },
   {
     label: "Cerrar Sesión",

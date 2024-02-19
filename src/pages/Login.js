@@ -4,7 +4,7 @@ import { Button } from "primereact/button";
 import { SignInAdmin } from "../services/firebase/auth";
 import { useContext, useEffect, useState } from "react";
 import "../App.css";
-import { OCUPATION_PAGE } from "../constants/routes";
+import { TEACHER_PAGE } from "../constants/routes";
 import { AuthContext } from "../App";
 
 const Login = ({ history }) => {
@@ -18,7 +18,7 @@ const Login = ({ history }) => {
       const response = await SignInAdmin(email, password);
       if (response.user.uid) {
         setUser(response.user);
-        history.push(OCUPATION_PAGE);
+        history.push(TEACHER_PAGE);
       }
       console.log(response);
     } catch (error) {

@@ -4,6 +4,7 @@ import "./style.scss";
 import { InputText } from "primereact/inputtext";
 import { Toolbar } from "primereact/toolbar";
 import { Button } from "primereact/button";
+import SideBarMenu from "../../components/SideBarMenu";
 
 const Table = ({
   children,
@@ -33,7 +34,7 @@ const Table = ({
     );
   };
 
-  const leftToolbarTemplate = () => {
+  const rightToolbarTemplate = () => {
     return (
       <>
         <Button
@@ -45,12 +46,17 @@ const Table = ({
       </>
     );
   };
+    const leftToolbarTemplate = () => {
+        return (
+            <SideBarMenu/>
+        );
+    };
 
   const header = renderHeader();
 
   return (
     <div className="card">
-      <Toolbar className="p-mb-4" left={leftToolbarTemplate} />
+        <Toolbar className="p-mb-4" right={rightToolbarTemplate} left={leftToolbarTemplate}/>
       <DataTable
         value={data}
         header={header}

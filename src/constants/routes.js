@@ -1,10 +1,10 @@
 //comon pages
 export const LOGIN_PAGE = "/login";
 
-//numerarias pages
-export const OCUPATION_PAGE = "/ocupation";
-export const FLOOR_PAGE = "/floor";
-export const UNIVERSITY_PAGE = "/university";
-export const COUNTRY_PAGE = "/country";
+//administrator pages
+export const TEACHER_PAGE = "/teacher";
+export const SCHEDULE_PAGE = "/schedule";
+export const BALANCE_PAGE = "/balance";
+export const STUDENT_PAGE = "/student";
 
-//residentes pages
+//teachers pages

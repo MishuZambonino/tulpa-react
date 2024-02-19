@@ -6,7 +6,7 @@ import SideBarMenu from "../../components/SideBarMenu";
 import { Button } from "primereact/button";
 import "../../App.css";
 import { addUser } from "../../services/firebase/collection/user";
-import { OCUPATION_PAGE } from "../../constants/routes";
+import { TEACHER_PAGE } from "../../constants/routes";
 
 const Ocupation = () => {
   const { user } = useContext(AuthContext);

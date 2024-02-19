@@ -8,19 +8,19 @@ import {
 import "./App.css";
 import {
   LOGIN_PAGE,
-  OCUPATION_PAGE,
-  FLOOR_PAGE,
-  UNIVERSITY_PAGE,
-  COUNTRY_PAGE,
+  TEACHER_PAGE,
+  SCHEDULE_PAGE,
+  BALANCE_PAGE,
+  STUDENT_PAGE,
 } from "./constants/routes";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "reflect-metadata";
 import Login from "./pages/Login";
-import Ocupation from "./pages/administration/Ocupation/Ocupation";
-import Floor from "./pages/administration/Floor/Floor";
-import University from "./pages/administration/University/University";
-import Country from "./pages/administration/Country/Country";
+import Teacher from "./pages/administration/Teacher/Teacher";
+import Schedule from "./pages/administration/Schedule/Schedule";
+import Balance from "./pages/administration/Blance/Balance";
+import Student from "./pages/administration/Student/Student";
 
 export const AuthContext = React.createContext(null);
 export default function () {
@@ -35,10 +35,10 @@ export default function () {
               <Redirect to={LOGIN_PAGE} />
             </Route>
             <Route path={LOGIN_PAGE} exact component={Login} />
-            <Route path={OCUPATION_PAGE} exact component={Ocupation} />
-            <Route path={FLOOR_PAGE} exact component={Floor} />
-            <Route path={UNIVERSITY_PAGE} exact component={University} />
-            <Route path={COUNTRY_PAGE} exact component={Country} />
+            <Route path={TEACHER_PAGE} exact component={Teacher} />
+            <Route path={SCHEDULE_PAGE} exact component={Schedule} />
+            <Route path={BALANCE_PAGE} exact component={Balance} />
+            <Route path={STUDENT_PAGE} exact component={Student} />
           </Switch>
         </Router>
       </AuthContext.Provider>
