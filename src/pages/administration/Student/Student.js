@@ -110,12 +110,9 @@ const Student = () => {
             setGlobalFilter={setGlobalFilter}
             openNew={openNew}
         >
-          <Column field="ci" header="CI" sortable />
-          <Column field="lastname" header="Apellidos" sortable />
-          <Column field="name" header="Nombres" sortable />
-          <Column field="initDate" header="Fecha inicio" sortable />
-          <Column field="finishDate" header="Fecha finalización" sortable />
-          <Column field="active" header="Activo" body={activeBodyTemplate()} />
+          <Column field="name" header="Nombre" sortable />
+          <Column field="lastname" header="Apellido" sortable />
+          <Column field="active" header="Activo" body={activeBodyTemplate} />
           <Column body={actionBodyTemplate}></Column>
         </Table>
         <StudentModal

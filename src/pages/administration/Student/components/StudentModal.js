@@ -77,13 +77,13 @@ const StudentModal = ({ hideDialog, studentEdit, showDialog }) => {
   };
 
   const handleEditStudent = (event) => {
+    console.log(event)
     const { name, value } = event.target;
     const studentCopy = { ...student };
     studentCopy[name] = value;
     setStudent(studentCopy);
     console.log(student);
   };
-
   const handleCheckChange = (event) => {
     const { checked, value } = event;
     const studentCopy = { ...student };
@@ -161,6 +161,7 @@ const StudentModal = ({ hideDialog, studentEdit, showDialog }) => {
               name="birthDate"
               value={student.birthDate}
               onChange={handleEditStudent}
+              dateFormat="dd/mm/yy"
               showIcon
               required
           />

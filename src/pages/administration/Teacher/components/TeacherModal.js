@@ -7,6 +7,7 @@ import { addTeacher } from "../../../../services/firebase/collection/teacher";
 import { Button } from "primereact/button";
 import { generateId } from "../../../../utils/generateId";
 import {Calendar} from "primereact/calendar";
+import { Avatar } from 'primereact/avatar';
 
 const TeacherModal = ({ hideDialog, teacherEdit, showDialog }) => {
   const [teacher, setTeacher] = useState({
